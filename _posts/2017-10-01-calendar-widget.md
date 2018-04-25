@@ -14,50 +14,37 @@ categories: portfolio
 </div>
 
 
-## TL;DR
-### Development
-* `yarn`
-* `yarn start`
-
 ### Usage
+
 * load `dist/bookingsync-calendar-widget.js` script
 * add `<div data-bookingsync-calendar-widget></div>` tag to the place you would like to put the widget. 
 
 * Or as global.
-```javascript
+{% highlight javascript %}
 const calendar = new BookingSyncCalendar({ el: document.querySelector('.my-widget') });
-```
+{% endhighlight %}
 
 * Or as module 
-```javascript
+{% highlight javascript %}
+
 import Calendar from 'bookingsync-calendar-widget';
 
 const calendar = new Calendar({ el: document.querySelector('.my-widget') });
-```
+
+{% endhighlight %}
 
 @see `index.html` for more examples.
 
 ### Setup
+
 * [Webpack](webpack.github.io) based.
 * ES6 as a source.
 * Exports in a [umd](https://github.com/umdjs/umd) format, runs everywhere.
 * ES6 tests with [Mocha](http://mochajs.org/), [Chai](http://chaijs.com/) and [Karma](https://karma-runner.github.io/1.0/index.html) runner.
 * Linting with [Airbnb eslint](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb-base)
 
-## Getting started with Development
-* `yarn` to get the project's dependencies.
-* `yarn start` to start development server with live-reload and hot module replacement
-* go to [http://localhost:8080/index.html](http://localhost:8080/index.html)
-
-Additionally you can run json-mock server
-* `npm run mock-server` it serve maps api for local development. Mocks are in `db.json` file.
-
-## Scripts
-* `yarn start` - starts development server with live-reload and hot module replacement
-* `yarn run build` - produces production version under the `dist` folder
-* `yarn run test` - runs tests.
-
 ## Config
+
 | __Option__ | __Description__ | __Type__ | __Default__ |
 | ---        | ---             | ---      | ---         |
 | `el` | HTMLElement to act as a container (only this one is MANDATORY) | HTMLElement | null
@@ -103,7 +90,7 @@ e.g.
 ## Events
 Calendar implements event Emitter, receiver can subscribe/unsubscribe to events and subscribe one-time.
 
-```javascript
+{% highlight javascript %}
 var cal = new BookingSyncCalendarWidget({
   el:         document.querySelector('.calendar-wrapper'),
 });
@@ -122,7 +109,7 @@ cal.once('selection-end', function(a, b) {
 cal.off('selection-end', function(a, b) {
     console.log('selection-end', a, b)
  }); 
-```
+{% endhighlight %}
 
 | __Event__ | __Description__ | __Params__ |
 | ---       | ---             | ---        |
