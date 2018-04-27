@@ -1,0 +1,53 @@
+---
+layout: default
+---
+
+<div class="home">
+  {%- if page.title -%}
+  <h1 class="page-heading">{{ page.title }}</h1>
+  {%- endif -%}
+
+  {{ content }}
+
+  {%- if site.posts.size > 0 -%}
+    <ul class="post-list">
+      {%- for post in site.posts -%}
+      <li class="post-list-item">
+        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+
+        <div class="post-list-presentation">
+          <a class="post-link" href="{{ post.url }}">
+            <h2>{{ post.title | escape }}</h2>
+            <div class="post-list-media-wrapper">
+              <img class="post-list-media" src="assets/{{ post.media }}"/>
+            </div>
+          </a>
+        </div>
+
+        <div class="post-list-description">
+          <dl>
+            <dt>Client:</dt>
+            <dd>{{ post.client }}</dd>
+            <dt>Technologies:</dt>
+            <dd>{{ post.tech }}</dd>
+            <dt>Role:</dt>
+            <dd>{{ post.role }}</dd>
+            <dt>Challenges:</dt>
+            <dd>{{ post.challenge }}</dd>
+          </dl>
+
+          {%- if post.urlDemo -%}
+            <a class="btn" href="{{ post.urlDemo }}" target="_blank">
+              Go to website
+            </a>
+          {{ post.testCreds }}
+          {%- endif -%}
+
+        </div>
+      </li>
+      {%- endfor -%}
+    </ul>
+
+  {%- endif -%}
+
+</div>

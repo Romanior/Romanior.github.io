@@ -1,8 +1,12 @@
 ---
 layout: post
 title:  "Calendar Widget"
-date:   2017-10-01 12:09:28 +0300
 categories: portfolio
+media: calendar.png
+client: BookingSync
+role:   JavaScript Developer
+tech:   Vanilla JavaScript, Webpack, Mocha, Chai, Karma,
+challenge: No dependencies on other frameworks or libraries, cross-browser Data support, fast rendering with "Virtual" DOM
 ---
 
 <div data-bookingsync-calendar-widget
@@ -10,7 +14,7 @@ categories: portfolio
      data-display-months="4"
      data-show-rates="true"
      data-show-min-stay="true"
-     data-rental-id="2">
+     data-rental-id="8">
 </div>
 
 
