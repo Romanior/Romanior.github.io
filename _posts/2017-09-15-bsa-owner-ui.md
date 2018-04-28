@@ -1,11 +1,11 @@
 ---
 layout:     post
-title:      BookingSync Owner Application
+title:      Owner Application
 categories: portfolio
 media:      owners.png
 client:     BookingSync
 role:       Front End Developer
-tech:       Ember.js Framework, Ember-cli, 
+tech:       Ember.js Framework, Ember-cli 
 challenge:  Custom infinite scrolling calendar add-on, Ember.js performance, rendering performance, smooth scrolling
 urlDemo:    https://owners-app.herokuapp.com
 ---
